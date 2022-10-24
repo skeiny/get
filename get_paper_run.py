@@ -9,15 +9,15 @@ from urllib.error import HTTPError
 
 def main():
     ## config
-    key_words = ["SMR"]
-    conference_list = ["date"]
+    key_words = ["csd","computational"]
+    conference_list = ["date",'dac','hpca','fast']
     journal_list = [["tcad",41]]
 
 
     if(True):
-        loop_conference(conference_list, key_words, 2022, 2022)
+        loop_conference(conference_list, key_words, 2020, 2022)
     if(True):
-        loop_journal(journal_list,key_words,5)
+        loop_journal(journal_list,key_words,3)
 
 def loop_conference(conference_list, key_words, begin, end):
     # get
@@ -47,8 +47,10 @@ def loop_conference(conference_list, key_words, begin, end):
             df.drop(idx, inplace=True)
 
     # output
+    if not os.path.exists(os.path.abspath(os.path.dirname(sys.argv[0]) + "/result")):
+        os.makedirs(os.path.abspath(os.path.dirname(sys.argv[0]) + "/result"))
     os.chdir(os.path.abspath(os.path.dirname(sys.argv[0]) + "/result"))
-    filename = str(datetime.date.today()) + "_confResult_" + str(begin) + "~" + str(end)
+    filename = str(datetime.date.today()) + "_ConfResult_" + str(begin) + "~" + str(end)
     df.to_csv((filename + ".csv"), index=False, encoding='utf_8_sig')
 
 
@@ -80,8 +82,10 @@ def loop_journal(journal_list,key_words,loop):
             df.drop(idx, inplace=True)
 
     # output
+    if not os.path.exists(os.path.abspath(os.path.dirname(sys.argv[0]) + "/result")):
+        os.makedirs(os.path.abspath(os.path.dirname(sys.argv[0]) + "/result"))
     os.chdir(os.path.abspath(os.path.dirname(sys.argv[0]) + "/result"))
-    filename = str(datetime.date.today()) + "_journalResult"
+    filename = str(datetime.date.today()) + "_JournalResult"
     df.to_csv((filename + ".csv"), index=False, encoding='utf_8_sig')
 
 
