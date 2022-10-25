@@ -14,6 +14,7 @@ def main():
     # number is the latest volume
     journal_list = [['tcad', 41], ['tpds', 33], ['tc', 71], ['tos', 18]]
 
+    # the last number is the volume num
     get(key_words, conference_list, 2018, 2022, journal_list, 5)
 
 
