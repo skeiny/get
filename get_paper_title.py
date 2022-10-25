@@ -8,6 +8,9 @@ from urllib.error import HTTPError
 
 
 def main():
+    # conference_dictionary = ['PPoPP', 'FAST', 'DAC', 'HPCA', 'MICRO', 'SC', 'ASPLOS', 'ISCA', 'USENIX', 'DATE', 'SIGMOD', 'CODES']
+    # journal_dictionary = [['tcad', 41], ['tpds', 33], ['tc', 71], ['tos', 18]]
+
     # config
     key_words = ['learned index', 'learned', 'index', 'LSM', 'KV', 'secondary', 'correlation', 'database']
     conference_list = ['DAC', 'DATE', 'usenix', 'HPCA', 'FAST', 'SIGMOD', 'VLDB', 'ICDE', 'codes']
