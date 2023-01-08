@@ -12,10 +12,10 @@ def main():
     # journal_dictionary = [['tcad', 41], ['tpds', 33], ['tc', 71], ['tos', 18]]
 
     # config
-    key_words = ['learned index', 'learned', 'index', 'LSM', 'KV', 'secondary', 'correlation', 'database']
-    conference_list = ['DAC', 'DATE', 'usenix', 'HPCA', 'FAST', 'SIGMOD', 'VLDB', 'ICDE', 'codes']
+    key_words = ['secondary', 'secondary index', 'key-value', 'lsm', 'log-structured', 'learned']
+    conference_list = ['SIGMOD', 'pvldb', 'icde', 'ppopp', 'fast', 'hpca']
     # number is the latest volume
-    journal_list = [['tcad', 41], ['tpds', 33], ['tc', 71], ['tos', 18]]
+    journal_list = [['tcad', 41], ['tos', 18], ['tpds', 33]]
 
     # the last number is the volume num
     get(key_words, conference_list, 2018, 2022, journal_list, 5)
