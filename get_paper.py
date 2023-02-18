@@ -8,14 +8,11 @@ from urllib.error import HTTPError
 
 
 def main():
-    # conference_dictionary = ['PPoPP', 'FAST', 'DAC', 'HPCA', 'MICRO', 'SC', 'ASPLOS', 'ISCA', 'USENIX', 'DATE', 'SIGMOD', 'CODES']
-    # journal_dictionary = [['tcad', 41], ['tpds', 33], ['tc', 71], ['tos', 18]]
-
     # config
-    key_words = ['secondary', 'secondary index', 'key-value', 'lsm', 'log-structured', 'learned']
-    conference_list = ['SIGMOD', 'pvldb', 'icde', 'ppopp', 'fast', 'hpca']
+    key_words = ['secondary', 'index', 'secondary index', 'key-value', 'kv', 'lsm', 'log-structured', 'learned', 'learned index']
+    conference_list = ['PPoPP', 'FAST', 'DAC', 'HPCA', 'MICRO', 'SC', 'ASPLOS', 'ISCA', 'ATC', 'DATE', 'SIGMOD', 'CODES+ISSS', 'ICDE', 'SIGIR', 'SIGKDD', 'CIKM', 'ICDM', 'EDBT', 'CIDR', 'ICDCS']
     # number is the latest volume
-    journal_list = [['tcad', 41], ['tos', 18], ['tpds', 33]]
+    journal_list = [['tcad', 42], ['tpds', 34], ['tc', 72], ['tos', 18], ['tods', 47], ['tkde', 35], ['tois', 40], ['pvldb', 16]]
 
     # the last number is the volume num
     get(key_words, conference_list, 2018, 2022, journal_list, 5)
@@ -32,8 +29,8 @@ def get(key_words, conference_list, year_begin, year_end, journal_list, volume_f
                 print(e)
                 year += 1
                 continue
-            for i in papers:
-                total.append(i)
+            for paper in papers:
+                total.append(paper)
             year += 1
 
     for journal in journal_list:
@@ -45,8 +42,8 @@ def get(key_words, conference_list, year_begin, year_end, journal_list, volume_f
                 print(e)
                 volume += 1
                 continue
-            for i in papers:
-                total.append(i)
+            for paper in papers:
+                total.append(paper)
             volume += 1
 
     df = pd.DataFrame(total)
@@ -124,5 +121,5 @@ def getJournals(name, volume):
     return papers
 
 
-# run here
-main()
+if __name__ == '__main__':
+    main()
