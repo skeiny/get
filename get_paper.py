@@ -10,7 +10,7 @@ from urllib.error import HTTPError
 def main():
     # config
     key_words = ['secondary', 'index', 'secondary index', 'key-value', 'kv', 'lsm', 'log-structured', 'learned', 'learned index']
-    conference_list = ['PPoPP', 'FAST', 'DAC', 'HPCA', 'MICRO', 'SC', 'ASPLOS', 'ISCA', 'ATC', 'DATE', 'SIGMOD', 'CODES+ISSS', 'ICDE', 'SIGIR', 'SIGKDD', 'CIKM', 'ICDM', 'EDBT', 'CIDR', 'ICDCS']
+    conference_list = ['PPoPP', 'FAST', 'DAC', 'HPCA', 'MICRO', 'SC', 'ASPLOS', 'ISCA', 'USENIX', 'DATE', 'SIGMOD', 'CODES', 'ICDE', 'SIGIR', 'KDD', 'CIKM', 'ICDM', 'EDBT', 'CIDR', 'ICDCS']
     # number is the latest volume
     journal_list = [['tcad', 42], ['tpds', 34], ['tc', 72], ['tos', 18], ['tods', 47], ['tkde', 35], ['tois', 40], ['pvldb', 16]]
 
