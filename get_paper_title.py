@@ -12,13 +12,13 @@ def main():
     # journal_dictionary = [['tcad', 41], ['tpds', 33], ['tc', 71], ['tos', 18]]
 
     # config
-    key_words = ['secondary', 'secondary index', 'key-value', 'lsm', 'log-structured', 'learned']
-    conference_list = ['SIGMOD', 'pvldb', 'icde', 'ppopp', 'fast', 'hpca']
+    key_words = ['ssd', 'life time', 'wear', 'flash', 'nand', 'smr']
+    conference_list = ['dac', 'date', 'fast', 'hpca', 'micro', 'isca']
     # number is the latest volume
-    journal_list = [['tcad', 41], ['tos', 18], ['tpds', 33]]
+    journal_list = []
 
     # the last number is the volume num
-    get(key_words, conference_list, 2018, 2022, journal_list, 5)
+    get(key_words, conference_list, 2018, 2023, journal_list, 5)
 
 
 def get(key_words, conference_list, year_begin, year_end, journal_list, volume_forward):
